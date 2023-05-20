@@ -1,0 +1,301 @@
+@font-face {
+  font-family: 'CustomFont';
+  src: url('path/to/font.woff2') format('woff2'),
+       url('path/to/font.woff') format('woff');
+}
+body {
+  font-family: 'Rochester', cursive;
+}
+
+.backgroundI {
+    z-index: -1;
+    width: 600px; 
+    height: 100vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*margin: 0 28%;*/
+}
+.backgroundI img {
+    filter: blur(1.5px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@media (max-width: 767px) {
+    .backgroundI {
+      width: 100vw; /* Full width on mobile devices */
+      height: 100vh; /* Full height on mobile devices */
+    }
+  }
+
+h1 {
+    font-family: 'Rochester', cursive;
+    text-align: center;
+    position: relative;
+    font-size: 30px;
+    top: 20px;
+    color:rgb(245, 35, 56);
+}
+
+.try-style {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -40vh;
+  margin-left: 200px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 10vh;
+    width: 0px;
+    height: 0px;
+  }
+  
+  #box {
+    width: 250px;
+    height: 40vh;
+    background-color: rgba(133, 202, 202, 0.472); /* Initial color */
+    display: inline-block;
+    border: 0.5rem solid rgba(0, 0, 0, 0.471);
+    border-radius: 10%;
+  }
+
+#alert-container {
+    position: fixed;
+    width: 60vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9999;
+    display: none;
+}
+
+.volume-class {
+  position: fixed;
+  margin-top: 45vh;
+  margin-left: -15vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#volumeControl-button {
+  font-size: 8px;
+  color: bisque;
+  position: relative;
+  justify-content: center;
+  background-color: rgb(189, 162, 111);
+  border-color: rgb(210, 159, 40);
+  font-family: 'Rochester', cursive;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+#volumeControl {
+  position: relative;
+  width: 100px; /* Set the desired width for the slider */
+  margin-top: 15px;
+}
+
+.three-color-slider {
+  position: absolute;
+  top: 50%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  margin-top: 18vh;
+  width: 180px;
+  height: 20vh;
+}
+
+
+/*color-slider*/
+.color-slider-RED  
+{
+  position: relative;
+  width: 100%;
+  margin: 20px;
+
+}
+.color-slider-GREEN
+{
+  position: relative;
+  width: 100%;
+  margin: 20px;
+}
+.color-slider-BLUE
+{
+  position: relative;
+  width: 100%;
+  margin: 20px;
+}
+
+.slider 
+{
+  width: 100%;
+}
+
+#colorValue-RED 
+{
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -10px;
+  color: rgba(255, 0, 0, 0.693);
+}
+#colorValue-BLUE 
+{
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -10px;
+  color: rgba(0, 0, 255, 0.593);
+}
+#colorValue-GREEN 
+{
+  position: relative;
+  text-align: center;
+  font-weight: bold;
+  margin-top: -10px;
+  color: rgba(0, 128, 0, 0.739);
+}
+
+#colorBox-RED 
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(241, 122, 10);
+  border-radius: 10%;
+  margin-top: -55px;
+  left: 50px;
+  margin-left: auto;
+  
+}
+#colorBox-BLUE 
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(241, 122, 10);
+  border-radius: 10%;
+  margin-top: -55px;
+  left: 50px;
+  margin-left: auto;
+}
+#colorBox-GREEN 
+{
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  border: 5px solid rgb(241, 122, 10);
+  border-radius: 10%;
+  margin-top: -55px;
+  left: 50px;
+  margin-left: auto;
+}
+
+
+
+#end-score {
+  font-size: 100%;
+}
+
+#button-check {
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  color: white;
+  font-family: 'Rochester', cursive;
+  background-color: rgb(248, 172, 102);
+  border-color: rgb(171, 89, 12);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40vh;
+}
+
+.clues {
+  position: absolute;
+  z-index: -1;
+  font-family: 'Rochester', cursive;
+  top: 72%;
+  left: 50%;
+  font-size: 65%;
+  color: whitesmoke;
+  width: 200px;
+  height:  225px;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.237);
+  border-color: rgb(2, 2, 2);
+  border-radius: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-right: 1%;
+  padding-left: 1%;
+  transform: translate(-50%, -50%);
+  margin-left: -130px;
+}
+
+.check-colors {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  font-family: 'Rochester', cursive;
+  font-size: 80%;
+  font-weight: bolder;
+  color: yellow;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -130px;
+}
+.lifeC {
+  position: absolute;
+  background-image: url(heart-png-31.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 80px; /* Desired width */
+  height: 80px; /* Desired height */
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 200px;
+  padding-top: 15px;
+  padding-left: 30px;
+  font-family: 'Rochester', cursive;
+  color: aliceblue;
+}
+
+#life {
+  position: relative;
+  font-size: 200%;
+}
+
+.score {
+  position: absolute;
+  width: 130px; /* Desired width */
+  height: 90px; /* Desired height */
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: -200px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  font-size: 400%;
+  background-color: rgba(6, 239, 111, 0.387);
+  color: white;
+  text-align: center;
+  border-radius: 5%;
+}

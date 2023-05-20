@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpMeColor-GROUP5</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body onload="showAlert()">
+    <div class="backgroundI">
+      <div><img src="painter1.jpg" alt="painter1"></div>
+    </div>
+
+    <div class="volume-class">
+      <audio id="audioPlayer" autoplay loop>
+        <source src="fruitloop-68205.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+        <button onclick="toggleMute()" id="volumeControl-button">MUTE</button>
+        <input type="range" id="volumeControl" min="0" max="100" step="1" value="100" onchange="changeVolume(this.value)">
+      </div>
+
+    <h1><b>HelpMEColor</b></h1>
+
+    <div  class="try-style">
+      <button id="try-again" type="button" class="btn btn-success" onclick="continueWebsite()">TRY AGAIN?</button>
+    </div>
+    
+    
+    <div id="alert-container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong id="your-score">PLAY THE GAME</strong>
+          <p id="end-score">Hello smart one, <bold>Please!</bold> Help Me to determine this color combination.</p> 
+          <button id="Continue" style="margin-top: 2%; width: 100%;" type="button" class="btn btn-success" onclick="continueWebsite()">Continue</button>
+          <button type="button" style="margin-top: 5px; width: 100%;" class="btn btn-danger" onclick="exitWebsite()">Exit</button>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+
+    <div class="container">
+        <div id="box"></div>
+    </div>
+
+
+    <!--COLOR SLIDERS-->
+    <div class="three-color-slider">
+
+      <!--RED-->
+      <div class="color-slider-RED">
+        <input type="range" min="0" max="100" step="10" value="0" class="slider" id="colorRange-RED">
+        <div id="colorValue-RED">0%</div>
+        <div id="colorBox-RED"></div>
+      </div>
+      <!--GREEN-->
+      <div class="color-slider-GREEN">
+        <input type="range" min="0" max="100" step="10" value="0" class="slider" id="colorRange-GREEN">
+        <div id="colorValue-GREEN">0%</div>
+        <div id="colorBox-GREEN"></div>
+      </div>
+      <!--BLUE-->
+      <div class="color-slider-BLUE">
+        <input type="range" min="0" max="100" step="10" value="0" class="slider" id="colorRange-BLUE">
+        <div id="colorValue-BLUE">0%</div>
+        <div id="colorBox-BLUE"></div>
+      </div>
+       
+    </div>
+    
+    <!--WINNER CHECK BUTTON-->
+    <div class="check-colors">
+      <p id="for-checkR">COMBINATION</p>
+      <p id="for-checkG">COMBINATION</p>
+      <p id="for-checkB">COMBINATION</p>
+    </div>
+    <button class="btn btn-success" id="button-check" onclick="checkThreeC()">CHECK</button>
+    
+    <!--CLUE-->
+    <div class="clues">
+      <h2>CLUES</h2>
+      <ul>
+        <li><p id="clueOne" class="clueParag">HINTS</p></li>
+        <li><p id="clueTwo" class="clueParag">HINTS</p></li>
+        <li><p id="clueThree" class="clueParag">HINTS</p></li>
+      </ul>
+    </div>
+
+    <!--SCORE-->
+    <div class="score">
+      <p id="score">0</p>
+    </div>
+    
+    <!--LIFE-->
+    <div class="lifeC">
+      <p id="life">0</p>
+    </div>
+
+    <!--NO LIVES ALERT-->
+
+      <div id="alert-nolives">
+      </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
